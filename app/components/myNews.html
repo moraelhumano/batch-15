@@ -1,0 +1,20 @@
+<div class="container">
+    <input ng-model="search.title">
+</div>
+
+<div class="container">
+    <ul class="collapsible" data-collapsible="accordion">
+        <li ng-repeat="sec in $ctrl.noteData | filter:search">
+            <div class="collapsible-header"><i class="material-icons">picture_in_picture</i>{{sec.id}}) {{sec.title}}</div>
+            <div class="collapsible-body white"><span>
+                <div class="col m6 l6">
+                    <span><img src="{{sec.image}}" alt=""></span>
+            </div>
+            <div class="col m6 l6">
+                <p>{{sec.content}}</p>
+            </div>
+            </span>
+</div>
+</li>
+</ul>
+</div>
